@@ -1,0 +1,28 @@
+<section class="products container all">
+  <div class="products__label">
+    <div class="products__text--all">
+      <h2>Todos os produtos</h2>
+    </div>
+    <div class="products__text--add">
+      <a href="#" method="POST" class="button__blue button add">
+        Adicionar produto
+      </a>
+    </div>
+  </div>
+  <div class="products__card--all grid">
+    <% products.forEach(product => { %>
+    <div class="products__card--info">
+      <img src="<%= product.image %>" alt="<%= product.altText %>" />
+      <h3><%= product.name %></h3>
+      <p><%= product.price %></p>
+      <h3 class="products__card--code"><%= `#${product.id}` %></h3>
+      <div class="products__card--actions">
+        <i class="icon-delete" data-id="<%= product.id %>"></i>
+        <a href="<%= `/editar&id=${product.id}` %>">
+          <i class="icon-edit"></i>
+        </a>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>

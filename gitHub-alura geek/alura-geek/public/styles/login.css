@@ -1,0 +1,69 @@
+.login.container, .login__error.container {
+  padding-top: 4.75rem;
+  padding-bottom: 4.75rem;
+}
+
+.login__form {
+  display: flex;
+  justify-content: center;
+}
+
+.login__form legend {
+  margin: 0 auto 1rem;
+}
+
+.login__form input {
+  display: block;
+  width: 17.1875rem;
+  margin: 0 auto 1rem;
+}
+
+.login__form input + span {
+  display: none;
+}
+
+.login__form input.error {
+  border: 1px solid var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.login__form input.error + span {
+  display: flex;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 0.875rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.login__form .button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 2.125rem;
+}
+
+.login__error {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.login__error h2 {
+  font-weight: 500;
+  color: var(--blue);
+  font-family: var(--press-start);
+}
+
+.login__error p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.login__error img {
+  height: 100px;
+  margin: 0 auto;
+}

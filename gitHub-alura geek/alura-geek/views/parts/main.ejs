@@ -1,0 +1,92 @@
+<!-- Banner -->
+<section class="banner">
+  <div class="banner__image"></div>
+  <div class="banner__text">
+    <h2>Páscoa Promocional</h2>
+    <h3>Produtos selecionados com 33% de desconto</h3>
+    <div class="banner__button">
+      <a href="#consoles" class="button__blue button">Ver Consoles</a>
+    </div>
+  </div>
+</section>
+
+<!-- Destaque -->
+<section class="products container highlight">
+  <div class="products__text">
+    <h2>Star Wars</h2>
+    <a href="<%= `/ver&category=${starWars[0].category}` %>"
+      >Ver tudo <i class="icon-arrow-right"></i
+    ></a>
+  </div>
+  <div class="products__card grid">
+    <% starWars.forEach(product => { %>
+    <div>
+      <img src="<%= product.image %>" alt="<%= product.altText %>" />
+      <h3><%= product.name %></h3>
+      <p><%= product.price %></p>
+      <a
+        class="products__card--view"
+        href="#"
+        method="POST"
+        data-id="<%= product.id %>"
+      >
+        Ver produto
+      </a>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Consoles -->
+<section class="products container" id="consoles">
+  <div class="products__text">
+    <h2>Consoles</h2>
+    <a href="<%= `/ver&category=${consoles[0].category}` %>"
+      >Ver tudo <i class="icon-arrow-right"></i
+    ></a>
+  </div>
+  <div class="products__card grid">
+    <% consoles.forEach(console => { %>
+    <div>
+      <img src="<%= console.image %>" alt="<%= console.altText %>" />
+      <h3><%= console.name %></h3>
+      <p><%= console.price %></p>
+      <a
+        class="products__card--view"
+        href="#"
+        method="POST"
+        data-id="<%= console.id %>"
+      >
+        Ver produto
+      </a>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Diversos -->
+<section class="products container miscellaneous">
+  <div class="products__text">
+    <h2>Diversos</h2>
+    <a href="<%= `/ver&category=${diversos[0].category}` %>"
+      >Ver tudo <i class="icon-arrow-right"></i
+    ></a>
+  </div>
+  <div class="products__card grid">
+    <% diversos.forEach(misc => { %>
+    <div>
+      <img src="<%= misc.image %>" alt="<%= misc.altText %>" />
+      <h3><%= misc.name %></h3>
+      <p><%= misc.price %></p>
+      <a
+        class="products__card--view"
+        href="#"
+        method="POST"
+        data-id="<%= misc.id %>"
+      >
+        Ver produto
+      </a>
+    </div>
+    <% }) %>
+  </div>
+</section>

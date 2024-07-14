@@ -1,0 +1,28 @@
+<section class="product__image">
+  <img src="<%= product.image %>" alt="" aria-hidden="true" />
+</section>
+
+<section class="product container">
+  <img src="<%= product.image %>" alt="<%= product.altText %>" />
+  <div>
+    <h2><%= product.name %></h2>
+    <p><%= product.price %></p>
+    <p class="product__description"><%= product.description %></p>
+  </div>
+</section>
+
+<section class="products container">
+  <div class="products__text">
+    <h2>Produtos similares</h2>
+  </div>
+  <div class="products__card grid">
+    <% others.forEach(similar => { %>
+    <div>
+      <img src="<%= similar.image %>" alt="<%= similar.altText %>" />
+      <h3><%= similar.name %></h3>
+      <p><%= similar.price %></p>
+      <a href="<%= `/produto&id=${similar.id}` %>">Ver produto</a>
+    </div>
+    <% }) %>
+  </div>
+</section>
